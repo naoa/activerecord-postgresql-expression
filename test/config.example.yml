@@ -1,0 +1,12 @@
+default_connection: 'postgresql'
+
+connections:
+  postgresql:
+    arunit:
+      username: postgres
+      password: postgres
+      database: arunit
+    arunit2:
+      username: postgres
+      password: postgres
+      database: arunit2
