@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'activerecord/postgresql/expression/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "activerecord-mysql-comment"
+  spec.name          = "activerecord-postgresql-expression"
   spec.version       = ActiveRecord::PostgreSQL::Expression::VERSION
   spec.authors       = ["Naoya Murakami"]
   spec.email         = ["naoya@createfield.com"]
