@@ -43,6 +43,17 @@ end
 bundle exec rake db:migrate
 ```
 
+```ruby
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "posts", ["content"], name: "index_posts_on_content", using: :gin, expression: "to_tsvector('english'::regconfig, content)"
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/naoa/activerecord-postgresql-expression/fork )
