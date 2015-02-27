@@ -8,10 +8,15 @@ module ActiveRecord
         def indexes(table, stream)
           buf = StringIO.new
           super(table, buf)
-          buf = buf.string.chomp
-          output = add_index_with_expression(table) + "\n"
-          stream.print buf
-          stream.print output
+          output = add_index_with_expression(table)
+          if output == ""
+            buf = buf.string
+            stream.print buf
+          else
+            buf = buf.string.chomp
+            stream.print buf
+            stream.print output + "\n\n"
+          end
           stream
         end
 
