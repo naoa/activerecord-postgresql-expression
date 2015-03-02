@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/naoa/activerecord-postgresql-expression.png?branch=master)](https://travis-ci.org/naoa/activerecord-postgresql-expression)
 
-Adds expression to migrations for ActiveRecord PostgreSQL adapters
+Adds expression to migrations for ActiveRecord PostgreSQL adapters.
 
 ## Installation
 
